@@ -16,7 +16,7 @@ router.get('/tasks', function(req, res, next){
 
 router.get('/clans', function(req, res, next){
     let client = clashApi({
-        token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImUyNTI0YzRiLTFhNTgtNGM2Yi04NWViLWMwNDVmMGUzNDQ2ZSIsImlhdCI6MTQ4NDcwNTk3NSwic3ViIjoiZGV2ZWxvcGVyLzAzZjI3YWZjLTEwNzItNjA4Ny05NjQwLTZhZjllNDAyMTNlOCIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjUwLjI0Ljc0LjExNyJdLCJ0eXBlIjoiY2xpZW50In1dfQ.G5AUqLmVo0y8tL3YJ2ftl2QoSe5HHWS98q_cnASxhwwtJi1ZceZ1sgvUtsw62Rp8LDgeadnEQWj3cy3edMJ9yA" // Optional, can also use COC_API_TOKEN env variable
+        token: process.env.API_KEY
     });
 
     client
