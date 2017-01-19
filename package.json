@@ -1,0 +1,27 @@
+{
+  "name": "papercactus-api",
+  "version": "1.0.0",
+  "description": "The Paper Cactus API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enristerling/papercactus-api.git"
+  },
+  "author": "Enrique Sterling",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enristerling/papercactus-api/issues"
+  },
+  "homepage": "https://github.com/enristerling/papercactus-api#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "clash-of-clans-api": "^0.2.1",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "mongojs": "^2.4.0",
+    "nodemon": "^1.11.0"
+  }
+}
