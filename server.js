@@ -8,9 +8,11 @@ var index = require('./routes/index');
 var tasks = require('./routes/tasks');
 var clash = require('./routes/clash');
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 var app = express();
+
+app.use(express.static(__dirname + '/public'));
 
 //View Engine
 app.set('views', path.join(__dirname, 'views'));
