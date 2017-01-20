@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
+
 var mongojs = require('mongojs');
-var clashApi = require('clash-of-clans-api');
 var db = mongojs('mongodb://enristerling:enristerling@ds111489.mlab.com:11489/mytasklist_ricky', ['tasks']);
 
 // Get All Tasks
@@ -12,20 +12,6 @@ router.get('/tasks', function(req, res, next){
         }
         res.json(tasks);
     });
-});
-
-router.get('/clans', function(req, res, next){
-    let client = clashApi({
-        token: process.env.API_KEY
-    });
-
-    client
-        .clans()
-        .withWarFrequency('always')
-        .withMinMembers(25)
-        .fetch()
-        .then(response => res.json(response))
-        .catch(err => console.log(err))
 });
 
 // Get Single Task
